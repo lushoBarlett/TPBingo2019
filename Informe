@@ -1,3 +1,5 @@
 El .gitignore es un archivo que le dice a git qué archivos (o carpetas) debería ignorar a la hora de trackear y
 eventualmente commitear.
 
+El archivo .travis.yml sirve para darle especificaciones a Travis CI sobre qué lenguaje estás usando, sus dependencias,
+las ramas a compilar, los arvhivos a testear, etc.
