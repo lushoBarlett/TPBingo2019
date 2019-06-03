@@ -15,6 +15,8 @@ Ademas, se puede agregar codigo propio añadiendo un campo autoload al composer.
 PSR-4 es una espeficicacion para cargar automaticamente (autoload) clases desde las rutas de los archivos correspondientes, tambien describe donde depositar los archivos cargados segun la especificacion correspondiente.
 La clase a cargar debe corresponder a un archivo de PHP. En este caso particularmente, se encarga de traer todas las clases en archivos php de la carpeta src donde se especifique que  su namespace es Bingo.
 
+4) // TO-DO
+
 5) Todas las clases tienen un nombre, pero además pueden tener un "apellido", porque es probable que los nombres
 se repitan para diferentes estructuras, el namespace pone un apellido a las clases sin tener que escribirlo cada vez.
 Si lo quitamos, // completar.
