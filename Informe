@@ -1,1 +1,3 @@
+El .gitignore es un archivo que le dice a git qué archivos (o carpetas) debería ignorar a la hora de trackear y
+eventualmente commitear.
 
