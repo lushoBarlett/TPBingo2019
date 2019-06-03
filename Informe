@@ -1,8 +1,19 @@
 Informe De Trabajo Practico Integrador 2019
 
 1) El .gitignore es un archivo que le dice a git qué archivos (o carpetas) debería ignorar a la hora de trackear y
-eventualmente commitear.
+eventualmente commitear. // completar.
 
 2) El archivo .travis.yml sirve para darle especificaciones a Travis CI sobre qué lenguaje estás usando, sus dependencias,
 las ramas a compilar, los arvhivos a testear, etc. En el caso del archivo de este repositorio, se especifica que usamos
 php 7.2, que se requiere composer (actualizado) y que los tests están en la carpeta "tests".
+
+5) Todas las clases tienen un nombre, pero además pueden tener un "apellido", porque es probable que los nombres
+se repitan para diferentes estructuras, el namespace pone un apellido a las clases sin tener que escribirlo cada vez.
+Si lo quitamos, // completar.
+
+6) {@inheritdoc} es un "inline tag", significando que se escribe donde sea, y su función es ser una referencia a los comentarios
+hechos en una clase padre, entonces cuando hagamos la documentación de sus clases hijas escribiremos detalles de funcionamiento
+pero no será necesario escribir el comportamiento básico, puesto que lo hemos detallado previamente y lo podemos copiar y pegar
+con ese tag. En escencia funciona casi como un #define en C y C++.
+
+7) // TO-DO
