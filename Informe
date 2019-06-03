@@ -2,4 +2,5 @@ El .gitignore es un archivo que le dice a git qué archivos (o carpetas) deberí
 eventualmente commitear.
 
 El archivo .travis.yml sirve para darle especificaciones a Travis CI sobre qué lenguaje estás usando, sus dependencias,
-las ramas a compilar, los arvhivos a testear, etc.
+las ramas a compilar, los arvhivos a testear, etc. En el caso del archivo de este repositorio, se especifica que usamos
+php 7.2, que se requiere composer (actualizado) y que los tests están en la carpeta "tests".
