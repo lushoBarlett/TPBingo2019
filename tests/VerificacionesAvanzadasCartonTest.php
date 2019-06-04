@@ -100,8 +100,8 @@ class VerificacionesAvanzadasCartonTest extends TestCase {
     
     // paso previo al paso iterativo (columna 1)
     $max = 0;
-    for($j = 0; $j < count($columnas[$i]); $j++){
-        $max = $max < $celda ? $celda : $max;
+    for($j = 0; $j < count($columnas[0]); $j++){
+        $max = $max < $columnas[0][$j] ? $columnas[0][$j] : $max;
     }
     
     for($i = 1; $i < count($columnas); $i++){
@@ -113,7 +113,7 @@ class VerificacionesAvanzadasCartonTest extends TestCase {
       $this->assertTrue($min > $max);
       $max = 0;
       for($j = 0; $j < count($columnas[$i]); $j++){
-        $max = $max < $celda ? $celda : $max;
+        $max = $max < $columnas[$i][$j] ? $columnas[$i][$j] : $max;
       }
     }
   }
