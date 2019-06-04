@@ -106,7 +106,7 @@ class VerificacionesAvanzadasCartonTest extends TestCase {
     
     for($i = 1; $i < count($columnas); $i++){
       $min = 91;
-      for($j = 0; $j < count($columnas[$i]; $j++){
+      for($j = 0; $j < count($columnas[$i]); $j++){
         $min = $min > $columnas[$i][$j] && $columnas[$i][$j] != 0 ? $columnas[$i][$j] : $min;
       }
       // minimo de una columna mayor al maximo de la anterior
