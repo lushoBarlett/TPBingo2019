@@ -123,10 +123,10 @@ class VerificacionesAvanzadasCartonTest extends TestCase {
    */
   public function testFilasConVaciosUniformes() {
     $carton = new CartonEjemplo();
-    $columnas = $carton->columnas();
-    foreach($columnas as $columna){
-      for($i = 0; $i < count($columna) - 1; $i++){
-        $this->assertFalse($columna[$i] == 0 && $columna[$i+1] == 0);
+    $filas = $carton->filas();
+    foreach($filas as $fila){
+      for($i = 0; $i < count($fila) - 1; $i++){
+        $this->assertFalse($fila[$i] == 0 && $fila[$i+1] == 0);
       }
     }
   }
