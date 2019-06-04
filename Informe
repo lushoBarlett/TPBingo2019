@@ -15,7 +15,7 @@ Ademas, se puede agregar codigo propio añadiendo un campo autoload al composer.
 PSR-4 es una espeficicacion para cargar automaticamente (autoload) clases desde las rutas de los archivos correspondientes, tambien describe donde depositar los archivos cargados segun la especificacion correspondiente.
 La clase a cargar debe corresponder a un archivo de PHP. En este caso particularmente, se encarga de traer todas las clases en archivos php de la carpeta src donde se especifique que  su namespace es Bingo.
 
-4) // TO-DO
+4) Las alernativas que existen a Composer son "npm" (Node Package Manager) para Node.JS y "bundler" para Ruby. 
 
 5) Todas las clases tienen un nombre, pero además pueden tener un "apellido", porque es probable que los nombres
 se repitan para diferentes estructuras, el namespace pone un apellido a las clases sin tener que escribirlo cada vez.
@@ -26,4 +26,5 @@ hechos en una clase padre, entonces cuando hagamos la documentación de sus clas
 pero no será necesario escribir el comportamiento básico, puesto que lo hemos detallado previamente y lo podemos copiar y pegar
 con ese tag. En escencia funciona casi como un #define en C y C++.
 
-7) // TO-DO
+7) Significa que la segunda clase es hereditaria de la primera, es decir que se extiende una clase, de forma que la subclase hereda todos los métodos públicos y protegidos de la clase padre.
+A menos que una clase sobrescriba esos métodos, mantendrán su funcionalidad original.
