@@ -29,23 +29,13 @@ class CartonJs implements CartonInterface {
    * {@inheritdoc}
    */
   public function columnas() {
-     var   $columnas[]
-             $Numeros = $this->numeros_Carton;
-     for(m=0;m<9;m++){
-       $columnas[m]=array( numeros_Carton[0] [m], numeros_Carton[1] [m], numeros_Carton[2] [m];
-    return $columnas;
-     /** CodigoOriginalDeColumnas
-      [4,0,1],
-      [0,13,0],
-      [24,0,27],
-      [31,39,0],
-      [40,48,0],
-      [0,0,50],
-      [0,66,0],
-      [0,72,73],
-      [80,0,86],
-    ];*/
-      }
+     $columnas[];
+     $Numeros = $this->numeros_carton;
+     for($m=0;$m<9;$m++){
+       $columnas[$m]=array( $Numeros[0] [$m], $Numeros[1] [$m], $Numeros[2] [$m];
+     }
+     return $columnas;
+  }
 
   /**
    * {@inheritdoc}
