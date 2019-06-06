@@ -39,7 +39,6 @@ class VerificacionesAvanzadasCartonTest extends TestCase {
    * Verifica que para cada columna, haya al menos una celda ocupada.
    */
   public function testColumnaNoVacia(CartonInterface $carton) {
-    $carton = new CartonEjemplo();
     $columnas = $carton->columnas();
     foreach($columnas as $columna){
       $count = 0;
@@ -57,7 +56,6 @@ class VerificacionesAvanzadasCartonTest extends TestCase {
    * Verifica que no haya columnas de un carton con tres celdas ocupadas.
    */
   public function testColumnaCompleta(CartonInterface $carton) {
-    $carton = new CartonEjemplo();
     $columnas = $carton->columnas();
     foreach($columnas as $columna){
       $count = 0;
@@ -76,7 +74,6 @@ class VerificacionesAvanzadasCartonTest extends TestCase {
    * ocupada.
    */
   public function testTresCeldasIndividuales(CartonInterface $carton) {
-    $carton = new CartonEjemplo();
     $columnas = $carton->columnas();
     $unaCelda = 0;
     foreach($columnas as $columna){
@@ -99,7 +96,6 @@ class VerificacionesAvanzadasCartonTest extends TestCase {
    * las columnas a la derecha.
    */
   public function testNumerosIncrementales(CartonInterface $carton) {
-    $carton = new CartonEjemplo();
     $columnas = $carton->columnas();
     
     // paso previo al paso iterativo (columna 1)
@@ -127,7 +123,6 @@ class VerificacionesAvanzadasCartonTest extends TestCase {
    * Verifica que en una fila no existan más de dos celdas vacias consecutivas.
    */
   public function testFilasConVaciosUniformes(CartonInterface $carton) {
-    $carton = new CartonEjemplo();
     $filas = $carton->filas();
     foreach($filas as $fila){
       for($i = 0; $i < count($fila) - 1; $i++){
@@ -137,10 +132,10 @@ class VerificacionesAvanzadasCartonTest extends TestCase {
   }
   
   public function provider(){
-    return
-      [new CartonEjemplo(),
-       new CartonJs()
-      ];
+    return array(
+      [new CartonEjemplo()],
+      [new CartonJs()]
+      );
   }
 
 }
