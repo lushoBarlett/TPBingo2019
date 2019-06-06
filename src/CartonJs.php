@@ -22,18 +22,19 @@ class CartonJs implements CartonInterface {
    * {@inheritdoc}
    */
   public function filas() {
-    return [
-      [4,0,24,31,40,0,0,0,80],
-      [0,13,0,39,48,0,66,72,0],
-      [1,0,27,0,0,50,0,73,86],
-    ];
+    return $this->numeros_carton;
   }
 
   /**
    * {@inheritdoc}
    */
   public function columnas() {
-    return [
+     var   $columnas[]
+             $Numeros = $this->numeros_Carton;
+     for(m=0;m<9;m++){
+       $columnas[m]=array( numeros_Carton[0] [m], numeros_Carton[1] [m], numeros_Carton[2] [m];
+    return $columnas;
+     /** CodigoOriginalDeColumnas
       [4,0,1],
       [0,13,0],
       [24,0,27],
@@ -43,8 +44,8 @@ class CartonJs implements CartonInterface {
       [0,66,0],
       [0,72,73],
       [80,0,86],
-    ];
-  }
+    ];*/
+      }
 
   /**
    * {@inheritdoc}
