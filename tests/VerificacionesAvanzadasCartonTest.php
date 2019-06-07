@@ -125,8 +125,8 @@ class VerificacionesAvanzadasCartonTest extends TestCase {
   public function testFilasConVaciosUniformes(CartonInterface $carton) {
     $filas = $carton->filas();
     foreach($filas as $fila){
-      for($i = 0; $i < count($fila) - 1; $i++){
-        $this->assertFalse($fila[$i] == 0 && $fila[$i+1] == 0);
+      for($i = 0; $i < count($fila) - 2; $i++){
+        $this->assertFalse($fila[$i] == 0 && $fila[$i+1] == 0 && $fila[$i+2] == 0);
       }
     }
   }
