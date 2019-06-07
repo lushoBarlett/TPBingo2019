@@ -31,7 +31,7 @@ class CartonEjemplo implements CartonInterface {
    * {@inheritdoc}
    */
   public function columnas() {
-     $columnas[];
+     $columnas = [];
      $Numeros = $this->numeros_carton;
      for($m=0;$m<9;$m++){
        $columnas[$m]=array( $Numeros[0] [$m], $Numeros[1] [$m], $Numeros[2] [$m]);
