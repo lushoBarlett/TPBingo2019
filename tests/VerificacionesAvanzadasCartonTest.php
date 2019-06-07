@@ -132,7 +132,7 @@ class VerificacionesAvanzadasCartonTest extends TestCase {
   }
   
   public function provider(){
-    return [new CartonEjemplo, new CartonJs];
+    return array([new CartonEjemplo], [new CartonJs]);
   }
 
 }
