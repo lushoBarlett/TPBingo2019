@@ -14,7 +14,7 @@ class CartonJs implements CartonInterface {
     $this->numeros_carton = [
       [4,0,24,31,0,50,0,0,80],
       [0,13,0,39,48,0,66,72,0],
-      [7,0,27,0,0,53,0,73,86],
+      [7,0,27,0,0,55,0,73,86],
     ];
   }
 
