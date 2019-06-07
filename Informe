@@ -1,7 +1,9 @@
 Informe De Trabajo Practico Integrador 2019
 
 1) El .gitignore es un archivo que le dice a git qué archivos (o carpetas) debería ignorar a la hora de trackear y
-eventualmente commitear. // completar.
+eventualmente commitear. .gitignore no es capaz de ignorar archivos ya trackeados por git. En el caso de este repositorio,
+este archivo está ignorando la carpeta "vendor" que contiene archivos correspondientes a programas de terceros, útiles para Travis,
+pero no para git.
 
 2) El archivo .travis.yml sirve para darle especificaciones a Travis CI sobre qué lenguaje estás usando, sus dependencias,
 las ramas a compilar, los arvhivos a testear, etc. En el caso del archivo de este repositorio, se especifica que usamos
@@ -20,16 +22,17 @@ php de la carpeta src donde se especifique que  su namespace es Bingo.
 
 4) Las alernativas que existen a Composer son "npm" (Node Package Manager) para Node.JS y "bundler" para Ruby. 
 
-5) Todas las clases tienen un nombre, pero además pueden tener un "apellido", porque es probable que los nombres
-se repitan para diferentes estructuras, el namespace pone un apellido a las clases sin tener que escribirlo cada vez.
-Si lo quitamos, // completar.
+5) Todas las clases tienen un nombre, pero además pueden tener un "apellido" que las identifique, porque es probable que los nombres
+se repitan para diferentes estructuras. El namespace pone un apellido a las clases sin tener que escribirlo cada vez.
+PHPUnit prueba las funciones que le especificamos, una forma de decirlo es a través del namespace, si quitamos el namespace PHPUnit
+no probará nada, porque tiene especificado que pruebe los tests con apellido Bingo.
 
-6) {@inheritdoc} es un "inline tag", significando que se escribe donde sea, y su función es ser una referencia a los comentarios
-hechos en una clase padre, entonces cuando hagamos la documentación de sus clases hijas escribiremos detalles de funcionamiento
+6) {@inheritdoc} es un "inline tag", significando que se escribe donde sea en forma de comentario, y su función es ser una referencia a
+los comentarios hechos en una clase padre, entonces cuando hagamos la documentación de sus clases hijas escribiremos detalles de funcionamiento
 pero no será necesario escribir el comportamiento básico, puesto que lo hemos detallado previamente y lo podemos copiar y pegar
 con ese tag. En escencia funciona casi como un #define en C y C++.
 
-7) La razón de que tests extienda de TestCases es para heredar los custom Asserts // y para probar el codigo? //.
-Significa que la segunda clase es hereditaria de la primera, es decir que se extiende una clase, de forma que la subclase hereda
-todos los métodos públicos y protegidos de la clase padre.
+7) La razón de que tests extienda de TestCases es para heredar los custom Asserts y toda la funcionalidad que nos brinda PHPUnit para los tests.
+Que una clase extienda de otra significa que la segunda clase (subclase) es hereditaria de la primera (súperclase), de forma que la
+subclase hereda todos los métodos públicos y protegidos de la súperclase.
 A menos que una clase sobrescriba esos métodos, mantendrán su funcionalidad original.
