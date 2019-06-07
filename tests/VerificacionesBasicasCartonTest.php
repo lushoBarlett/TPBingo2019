@@ -52,8 +52,11 @@ class VerificacionesBasicasCartonTest extends TestCase {
     $this->assertFalse($carton->tieneNumero(1));
   }
 
-  public function provider() {
-    return [new CartonEjemplo, new CartonJs];
+  public static function provider () {
+    return [
+      [new CartonEjemplo],
+      [new CartonJs]
+    ];
   }
   
 }
