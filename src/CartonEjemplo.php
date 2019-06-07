@@ -15,7 +15,7 @@ class CartonEjemplo implements CartonInterface {
   public function __construct() {
     $this->numeros_carton = [
       [0, 16, 0, 38, 47, 0, 67, 77, 0],
-      [9, 0, 28, 35, 0, 55, 0, 78, 0],
+      [9, 0, 28, 35, 0, 55, 0, 0, 84],
       [0, 12, 26, 0, 45, 0, 61, 0, 89],
     ];
   }
