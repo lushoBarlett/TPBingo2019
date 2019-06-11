@@ -8,9 +8,12 @@ class FabricaCartones implements CartonInterface{
 
   public function generarCarton() {
     // Algo de pseudo-código para ayudar con la evaluacion.
+    $times = 0;
     do{
+      $times++;
       $this->randomCarton = $this->intentoCarton();
-    }while($this->cartonEsValido($randomCarton) == FALSE);
+      $pass = $this->cartonEsValido($randomCarton);
+    }while($pass == FALSE && $times < 10);
     
     return $randomCarton;
   }
@@ -37,9 +40,9 @@ class FabricaCartones implements CartonInterface{
      $filas = [];
      $Numeros = $this->numeros_carton;
      for($m=0;$m<3;$m++){
-       $filas[$m]=array( $Numeros [$m] [0] , $Numeros [$m] [1] , $Numeros[$m] [2],
-                         $Numeros [$m] [3] , $Numeros [$m] [4] , $Numeros[$m] [5],
-                         $Numeros [$m] [6] , $Numeros [$m] [7] , $Numeros[$m] [8] );
+       $filas[$m]=array( $Numeros  [0] [$m] , $Numeros  [1] [$m] , $Numeros [2] [$m],
+                         $Numeros  [3] [$m], $Numeros  [4] [$m], $Numeros [5] [$m] ,
+                         $Numeros  [6] [$m]  , $Numeros  [7] [$m], $Numeros [8] [$m]);
      }
      return $filas;
   }
