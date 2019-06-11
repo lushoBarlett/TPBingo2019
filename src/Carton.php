@@ -23,6 +23,18 @@ class Carton {
      return $filas;
   }
   
+  public function numerosDelCarton() {
+    $numeros = [];
+    foreach ($this->filas() as $fila) {
+      foreach ($fila as $celda) {
+        if ($celda != 0) {
+          $numeros[] = $celda;
+        }
+      }
+    }
+    return $numeros;
+  }
+  
   public function tieneNumero(int $numero) {
     return in_array($numero, $this->numerosDelCarton());
   }
