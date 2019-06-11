@@ -1,5 +1,6 @@
 Informe De Trabajo Practico Integrador 2019
 
+
 1) El .gitignore es un archivo que le dice a git qué archivos (o carpetas) debería ignorar a la hora de trackear y
 eventualmente commitear. .gitignore no es capaz de ignorar archivos ya trackeados por git. En el caso de este repositorio,
 este archivo está ignorando la carpeta "vendor" que contiene archivos correspondientes a programas de terceros, útiles para Travis,
