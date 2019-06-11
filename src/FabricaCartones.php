@@ -2,7 +2,7 @@
 
 namespace Bingo;
 
-class FabricaCartones {
+class FabricaCartones implements CartonInterface{
   
   protected $randomCarton = [];
 
@@ -27,6 +27,37 @@ class FabricaCartones {
       return TRUE;
     }
     return FALSE;
+  }
+  
+  public function columnas() {
+    return $this->numeros_carton;
+  }
+  
+  public function filas() {
+     $filas = [];
+     $Numeros = $this->numeros_carton;
+     for($m=0;$m<3;$m++){
+       $filas[$m]=array( $Numeros [$m] [0] , $Numeros [$m] [1] , $Numeros[$m] [2],
+                         $Numeros [$m] [3] , $Numeros [$m] [4] , $Numeros[$m] [5],
+                         $Numeros [$m] [6] , $Numeros [$m] [7] , $Numeros[$m] [8] );
+     }
+     return $filas;
+  }
+  
+  public function numerosDelCarton() {
+    $numeros = [];
+    foreach ($this->filas() as $fila) {
+      foreach ($fila as $celda) {
+        if ($celda != 0) {
+          $numeros[] = $celda;
+        }
+      }
+    }
+    return $numeros;
+  }
+  
+  public function tieneNumero(int $numero) {
+    return in_array($numero, $this->numerosDelCarton());
   }
   
   // validate
