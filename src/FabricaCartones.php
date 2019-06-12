@@ -33,12 +33,12 @@ class FabricaCartones implements CartonInterface{
   }
   
   public function columnas() {
-    return $this->numeros_carton;
+    return $this->randomCarton;
   }
   
   public function filas() {
      $filas = [];
-     $Numeros = $this->numeros_carton;
+     $Numeros = $this->randomCarton;
      for($m=0;$m<3;$m++){
        $filas[$m]=array( $Numeros  [0] [$m] , $Numeros  [1] [$m] , $Numeros [2] [$m],
                          $Numeros  [3] [$m], $Numeros  [4] [$m], $Numeros [5] [$m] ,
