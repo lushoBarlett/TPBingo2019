@@ -17,8 +17,10 @@ class Carton implements CartonInterface{
   public function filas() {
      $filas = [];
      $Numeros = $this->numeros_carton;
-     for($m=0;$m<9;$m++){
-       $filas[$m]=array( $Numeros[0] [$m], $Numeros[1] [$m], $Numeros[2] [$m]);
+     for($m=0;$m<3;$m++){
+       $filas[$m]=array( $Numeros  [0] [$m] , $Numeros  [1] [$m] , $Numeros [2] [$m],
+                         $Numeros  [3] [$m], $Numeros  [4] [$m], $Numeros [5] [$m] ,
+                         $Numeros  [6] [$m]  , $Numeros  [7] [$m], $Numeros [8] [$m]);
      }
      return $filas;
   }
