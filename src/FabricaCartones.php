@@ -12,7 +12,7 @@ class FabricaCartones implements CartonInterface{
     do{
       $times++;
       $this->randomCarton = $this->intentoCarton();
-      $pass = $this->cartonEsValido($randomCarton);
+      $pass = $this->cartonEsValido($this->randomCarton);
     }while($pass == FALSE && $times < 10);
     
     return $randomCarton;
