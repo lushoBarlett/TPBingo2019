@@ -15,7 +15,7 @@ class FabricaCartones implements CartonInterface{
       $pass = $this->cartonEsValido();
     }while($pass == FALSE && $times < 10);
     
-    return $randomCarton;
+    return $this->randomCarton;
   }
 
   protected function cartonEsValido() {
